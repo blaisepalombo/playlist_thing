@@ -1,0 +1,66 @@
+[
+  {
+    "mood": "happy",
+    "songs": [
+      { "title": "Good Life", "artist": "OneRepublic", "img": "https://picsum.photos/100?random=11" },
+      { "title": "Brave", "artist": "Sara Bareilles", "img": "https://picsum.photos/100?random=12" },
+      { "title": "Fireflies", "artist": "Owl City", "img": "https://picsum.photos/100?random=13" }
+    ]
+  },
+  {
+    "mood": "chill",
+    "songs": [
+      { "title": "Sunset Lover", "artist": "Petit Biscuit", "img": "https://picsum.photos/100?random=21" },
+      { "title": "Pink + White", "artist": "Frank Ocean", "img": "https://picsum.photos/100?random=22" },
+      { "title": "Riptide", "artist": "Vance Joy", "img": "https://picsum.photos/100?random=23" }
+    ]
+  },
+  {
+    "mood": "focused",
+    "songs": [
+      { "title": "Weightless", "artist": "Marconi Union", "img": "https://picsum.photos/100?random=31" },
+      { "title": "Night Owl", "artist": "Galimatias", "img": "https://picsum.photos/100?random=32" },
+      { "title": "Borderline", "artist": "Tame Impala", "img": "https://picsum.photos/100?random=33" }
+    ]
+  },
+  {
+    "mood": "romantic",
+    "songs": [
+      { "title": "All of Me", "artist": "John Legend", "img": "https://picsum.photos/100?random=41" },
+      { "title": "At Last", "artist": "Etta James", "img": "https://picsum.photos/100?random=42" },
+      { "title": "Make You Feel My Love", "artist": "Adele", "img": "https://picsum.photos/100?random=43" }
+    ]
+  },
+  {
+    "mood": "sad",
+    "songs": [
+      { "title": "Someone Like You", "artist": "Adele", "img": "https://picsum.photos/100?random=51" },
+      { "title": "Skinny Love", "artist": "Bon Iver", "img": "https://picsum.photos/100?random=52" },
+      { "title": "Fix You", "artist": "Coldplay", "img": "httpsum.photos/100?random=53" }
+    ]
+  },
+  {
+    "mood": "energetic",
+    "songs": [
+      { "title": "Blinding Lights", "artist": "The Weeknd", "img": "https://picsum.photos/100?random=61" },
+      { "title": "Levitating", "artist": "Dua Lipa", "img": "https://picsum.photos/100?random=62" },
+      { "title": "Can't Hold Us", "artist": "Macklemore", "img": "https://picsum.photos/100?random=63" }
+    ]
+  },
+  {
+    "mood": "nostalgic",
+    "songs": [
+      { "title": "Take On Me", "artist": "a-ha", "img": "https://picsum.photos/100?random=71" },
+      { "title": "Africa", "artist": "Toto", "img": "https://picsum.photos/100?random=72" },
+      { "title": "Time After Time", "artist": "Cyndi Lauper", "img": "https://picsum.photos/100?random=73" }
+    ]
+  },
+  {
+    "mood": "motivated",
+    "songs": [
+      { "title": "Eye of the Tiger", "artist": "Survivor", "img": "https://picsum.photos/100?random=81" },
+      { "title": "Lose Yourself", "artist": "Eminem", "img": "https://picsum.photos/100?random=82" },
+      { "title": "Stronger", "artist": "Kanye West", "img": "https://picsum.photos/100?random=83" }
+    ]
+  }
+]

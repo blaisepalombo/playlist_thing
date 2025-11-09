@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Mood Playlist Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Montserrat:wght@600;700&family=Nunito:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Spotify Mood Playlist Generator</h1>
+  </header>
+
+  <main>
+    <section id="login-section">
+      <h2>Login with Spotify</h2>
+      <form id="login-form">
+        <label for="username">Spotify Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <section id="mood-section">
+      <h2>Select Your Mood</h2>
+      <form id="mood-form">
+        <label for="mood">Choose a mood:</label>
+        <select id="mood" name="mood" required>
+          <option value="">-- Select a mood --</option>
+          <option value="happy">Happy</option>
+          <option value="chill">Chill</option>
+          <option value="focused">Focused</option>
+          <option value="romantic">Romantic</option>
+          <option value="sad">Sad</option>
+          <option value="energetic">Energetic</option>
+          <option value="nostalgic">Nostalgic</option>
+          <option value="motivated">Motivated</option>
+        </select>
+
+        <fieldset>
+          <legend>Playlist Type</legend>
+          <label><input type="radio" name="playlistType" value="personal" required /> My Music History</label>
+          <label><input type="radio" name="playlistType" value="random" required /> Random Music</label>
+        </fieldset>
+
+        <button type="submit">Generate Playlist</button>
+      </form>
+    </section>
+
+    <section id="playlist-preview">
+      <h2>Your Playlist</h2>
+      <div class="playlist" id="playlist-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Spotify Mood Playlist Generator | Built with ❤️</p>
+  </footer>
+
+  <script type="module">
+    async function loadPlaylist(mood) {
+      const res = await fetch('./moods.json');
+      const data = await res.json();
+      const moodData = data.find(m => m.mood === mood);
+
+      const container = document.querySelector('#playlist-container');
+      container.innerHTML = '';
+
+      if (!moodData) return;
+
+      moodData.songs.forEach(song => {
+        container.innerHTML += `
+          <div class="song-card">
+            <img src="${song.img}">
+            <p><strong>${song.title}</strong><br><span>${song.artist}</span></p>
+          </div>
+        `;
+      });
+
+      localStorage.setItem('lastMood', mood);
+    }
+
+    document.querySelector('#mood-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const mood = document.querySelector('#mood').value;
+      loadPlaylist(mood);
+    });
+
+    const last = localStorage.getItem('lastMood');
+    if (last) loadPlaylist(last);
+  </script>
+</body>
+</html>
